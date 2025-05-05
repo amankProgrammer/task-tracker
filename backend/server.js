@@ -11,7 +11,7 @@ const app = express();
 // Update CORS configuration for production
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-frontend-domain.vercel.app'
+    ? 'https://task-tracker-five-cyan.vercel.app/'
     : 'http://localhost:5173'
 }));
 app.use(express.json());
