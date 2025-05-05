@@ -8,7 +8,6 @@ const taskRoutes = require('./routes/tasks');
 
 const app = express();
 
-// Update CORS configuration for production
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? 'https://task-tracker-five-cyan.vercel.app'
@@ -26,7 +25,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Routes
+// Update route paths to include /api
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const baseURL = import.meta.env.MODE === 'production'
-  ? 'https://task-tracker-bfjm.onrender.com'
+  ? 'https://task-tracker-bfjm.onrender.com/api'
   : 'http://localhost:5000/api';
 
 const api = axios.create({ baseURL });
