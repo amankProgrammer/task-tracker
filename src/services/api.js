@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' 
-    ? '/api'
-    : 'http://localhost:5000/api'
-});
+const baseURL = import.meta.env.MODE === 'production'
+  ? 'https://your-backend-domain.onrender.com/api'  // You'll update this with your Render domain
+  : 'http://localhost:5000/api';
+
+const api = axios.create({ baseURL });
 
 api.interceptors.request.use((config) => {
   const user = JSON.parse(localStorage.getItem('user'));
