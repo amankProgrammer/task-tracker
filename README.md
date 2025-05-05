@@ -1,12 +1,85 @@
-# React + Vite
+# Task Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack task management application built with React, Node.js, and MongoDB. This application helps users manage projects and tasks efficiently with features like task status tracking and progress visualization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (login/register)
+- Project management
+- Task creation and management
+- Task status tracking (Todo, In Progress, Completed)
+- Visual progress tracking with charts
+- Responsive design
+- Real-time notifications
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Frontend: [https://task-tracker-five-cyan.vercel.app](https://task-tracker-five-cyan.vercel.app)
+- Backend API: [https://task-tracker-bfjm.onrender.com](https://task-tracker-bfjm.onrender.com)
+
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+- Recharts
+- Axios
+- React Router DOM
+
+### Backend
+- Node.js
+- Express
+- MongoDB
+- JWT Authentication
+- Mongoose
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn
+
+### Local Development
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd task-tracker
+```
+# Install frontend dependencies
+npm install
+
+# Install backend dependencies
+cd backend
+npm install
+
+# Environment Setup:
+Create a .env file in the backend directory:
+
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=5000
+
+# Run backend (from backend directory)
+npm run dev
+
+# Run frontend (from root directory)
+npm run dev
+
+# API Endpoints
+### Authentication
+- POST /api/auth/register - Register new user
+- POST /api/auth/login - User login
+### Projects
+- GET /api/projects - Get all projects
+- POST /api/projects - Create new project
+- GET /api/projects/:id - Get single project
+- DELETE /api/projects/:id - Delete project
+### Tasks
+- GET /api/tasks/project/:projectId - Get project tasks
+- POST /api/tasks - Create new task
+- PUT /api/tasks/:id - Update task
+- DELETE /api/tasks/:id - Delete task
+
