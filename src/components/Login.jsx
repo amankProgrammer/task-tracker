@@ -30,6 +30,7 @@ export default function Login() {
 
   return (
     <AuthLayout title="Sign in to your account">
+      <h1>Demo Account : <br /><span>Username: admin@gmail.com</span><br />Password: admin123</h1>
       <form onSubmit={handleSubmit} className="mt-8 space-y-6">
         <div className="space-y-4">
           <input
